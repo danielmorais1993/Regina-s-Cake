@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Bolos regina</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="cell cell-1">Bolos da Regina
+      <span><input id="ck-nm" placeholder="Insira o nome do bolo" type="text"> </span>
+    </header>
+    <aside class="cell cell-2">Ingredientes
+      <form id="ingredients" action="POST ">
+
+        <table>
+          <tr>
+            <th>Ingrediente</th>
+            <th>Preço</th>
+            <th>quantidade</th>
+            
+          </tr>
+          <tr>
+            <td><label for="">açúcar</label></td>
+            <td> <input class="ingredient" type="text"><span class="unit">Kg</span></td>
+            <td><input class="quantity"  type="text">g</td>
+          
+          </tr>
+          <tr>
+            <td><label for="">farinha de trigo</label></td>
+            <td><input class="ingredient"  type="text"><span class="unit">Kg</span></td>
+            <td><input class="quantity" type="text">g</td>
+          
+          </tr>
+          <tr>
+            <td><label for="">margarina</label></td>
+            <td><input class="ingredient"  type="text"><span class="unit">Kg</span></td>
+            <td><input class="quantity"  type="text">g</td>
+         
+          </tr>
+          <tr>
+            <td><label for="">ovos</label></td>
+            <td><input class="ingredient"  type="text"><span class="unit">cart</span></td>
+            <td><input class="quantity"  type="text">unit</td>
+            
+          </tr>
+          <tr>
+            <td><label for="">leite</label></td>
+            <td><input class="ingredient"  type="text"><span class="unit">L</span></td>
+            <td><input class="quantity" type="text">ml</td>
+            
+          </tr>
+          <tr>
+            <td><label for="">fermento em pó</label></td>
+            <td><input class="ingredient"  type="text"><span class="unit">Kg</span></td>
+            <td><input class="quantity"  type="text">g</td>
+            
+          </tr>
+          <tr>
+            <td><label for="">chocolate em pó</label></td>
+            <td><input class="ingredient"  type="text"><span class="unit">Kg</span></td>
+            <td><input class="quantity"  type="text">g</td>
+          
+          </tr>
+          <tr>
+            <td><label for="">óleo</label></td>
+            <td><input class="ingredient"  type="text"><span class="unit">Kg</span></td>
+            <td><input class="quantity"  type="text">g</td>
+            
+          </tr>
+          <tr>
+            <td><label for="">iogurte</label></td>
+            <td><input class="ingredient"  type="text"><span class="unit">L</span></td>
+            <td><input class="quantity"  type="text">g</td>
+           
+          </tr>
+          <tr>
+            <td><label for="">creme de leite</label></td>
+            <td><input class="ingredient"  type="text"><span class="unit">cx</span></td>
+            <td class="grams"><input class="quantity"  type="text">g</td>
+            
+          </tr>
+        </table>
+
+        <button id="send-btn" type="submit">Preço total</button>
+      </form>
+    </aside>
+
+
+    <aside id="results" class="cell cell-4">Resultado:
+      <br>
+    </aside>
+    <footer class="cell cell-5">
+      <ol class="buildCakes"></ol>
+    </footer>
+  </div>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
