@@ -7,48 +7,8 @@ const setResults = document.getElementById('results');
 const getSpans =document.getElementsByClassName('unit');
 const getFooter  = document.querySelector('footer');
 const getBuildCakes = document.querySelector('.buildCakes');
-let newArray = [] ;
+let newArray = [];
 
-
-const food = {
-  açucar: {
-    cup : 160,
-    spool : 12,
-  },
-  farinhaDeTrigo: {
-    cup : 120,
-    spool : 2.5,
-  },
-  margarina: {
-    cup : 200,
-    spool : 4,
-  },
-  ovos: {
-    unit : 1
-    
-  },
-  leite: {
-    cup : 160,
-    spool : 12,
-  },
-  fermentoEmPo: {
-    spool : 5
-  },
-  chocolateEmPo: {
-    cup: 90,
-    spool: 9,
-  },
-  oleo:{
-    spool:15
-  },
-  iogurte:{
-    box:160
-  },
-  cremeDeLeite:{
-    box:200,
-  }
-
-}
 function buidResult(){
   const equalArray = [];
 [...getSpans].forEach((e)=>{
@@ -100,6 +60,7 @@ console.log(buidResult())
 
 function totalPrice(event){
   event.preventDefault();
+  
   const cakeName = document.querySelector('#ck-nm').value;
 
   let total =0;
@@ -110,6 +71,10 @@ function totalPrice(event){
   const obj = {
     name : cakeName,
     price : total
+  }
+ 
+  if(JSON.parse(localStorage.getItem('cakeValue'))!==null){
+    newArray = JSON.parse(localStorage.getItem('cakeValue'));
   }
   newArray.push(obj)
  
@@ -126,7 +91,6 @@ function totalPrice(event){
   elementCreated.innerHTML=`O valor total do bolo será ${total.toFixed(2)}`
   setResults.appendChild(elementCreated); 
   } 
-  initialRenderization()  
 }
 
 function initialRenderization(){
@@ -171,10 +135,10 @@ send_button.addEventListener('click',totalPrice);
 
 
 
+
+
+
 window.onload = initialRenderization();
-
-
-
 
 
 
